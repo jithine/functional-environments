@@ -1,0 +1,10 @@
+shared:
+  image: node:14
+jobs:
+  main:
+    requires: [ ~pr, ~commit ]
+    environment:
+      FOO: foo
+    steps:
+      - print: echo Starting main job!
+      - check: ./check-environments.sh
