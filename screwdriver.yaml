@@ -1,7 +1,6 @@
-shared:
-  image: node:18
 jobs:
   main:
+    image: node:18
     requires: [ ~pr, ~commit ]
     environment:
       FOO: foo
